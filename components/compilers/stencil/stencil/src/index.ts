@@ -52,7 +52,7 @@ export async function action(ctx: CompilerContext): Promise<BuildResults> {
   });
 
   const stencilConfigPath = path.resolve(directory, 'stencil.config.ts');
-  const stencilPlugins = ',"plugins": [sass()]}';
+  const stencilPlugins = ',"plugins": []}';
   const stencilConfig = {
     namespace: name,
     hashFileNames: false,
@@ -74,7 +74,7 @@ export async function action(ctx: CompilerContext): Promise<BuildResults> {
   stencilConfigText = stencilConfigText.substring(0, stencilConfigText.length - 1) + stencilPlugins;
 
   // write stencil config
-  const stencilConfigContents = `import { Config } from '@stencil/core';\nimport { sass } '@stencil/sass';\nexport const config: Config  =`;
+  const stencilConfigContents = `import { Config } from '@stencil/core';\nexport const config: Config  =`;
   await fsp.writeFile(stencilConfigPath, `${stencilConfigContents} ${stencilConfigText}`);
 
   try {

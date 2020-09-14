@@ -1,6 +1,6 @@
 {
   "name": "@bit/bit.envs.compilers.stencil",
-  "version": "0.0.35",
+  "version": "0.1.2",
   "homepage": "https://bit.dev/bit/envs/compilers/stencil",
   "main": "dist/stencil/src/index.js",
   "componentId": {
@@ -14,7 +14,9 @@
     "@bit/bit.envs.compilers.utils": "0.1.11"
   },
   "devDependencies": {
-    "@types/vinyl": "^2.0.3"
+    "@stencil/sass": "^1.3.2",
+    "@types/vinyl": "^2.0.3",
+    "i": "^0.3.6"
   },
   "peerDependencies": {},
   "license": "SEE LICENSE IN LICENSE",
