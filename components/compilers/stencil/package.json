@@ -1,0 +1,81 @@
+{
+  "name": "@bit/bit.envs.compilers.stencil",
+  "version": "0.0.35",
+  "homepage": "https://bit.dev/bit/envs/compilers/stencil",
+  "main": "dist/stencil/src/index.js",
+  "componentId": {
+    "scope": "bit.envs",
+    "name": "compilers/stencil",
+    "version": "0.0.35"
+  },
+  "dependencies": {
+    "execa": "^4.0.3",
+    "vinyl": "^2.2.0",
+    "@bit/bit.envs.compilers.utils": "0.1.11"
+  },
+  "devDependencies": {
+    "@types/vinyl": "^2.0.3"
+  },
+  "peerDependencies": {},
+  "license": "SEE LICENSE IN LICENSE",
+  "bit": {
+    "env": {
+      "compiler": {
+        "bit.envs/compilers/typescript@3.1.47": {
+          "rawConfig": {
+            "compilerPath": "typescript/bin/tsc",
+            "compilerArguments": [
+              "--declaration"
+            ],
+            "compiledFileTypes": [
+              ".ts",
+              ".tsx"
+            ],
+            "configFileName": "tsconfig.json",
+            "tsconfig": {
+              "compilerOptions": {
+                "outDir": "dist",
+                "target": "ES2015",
+                "sourceMap": false,
+                "moduleResolution": "Node",
+                "esModuleInterop": true,
+                "module": "CommonJS",
+                "allowSyntheticDefaultImports": true,
+                "resolveJsonModule": true,
+                "declaration": true,
+                "experimentalDecorators": true,
+                "inlineSourceMap": false,
+                "inlineSources": false,
+                "jsx": "react",
+                "rootDir": "./",
+                "removeComments": true,
+                "typeRoots": [
+                  "./node_modules/@types"
+                ],
+                "importHelpers": false
+              },
+              "include": [
+                "./**/*"
+              ],
+              "exclude": [
+                "node_modules",
+                ".dependencies",
+                "dist"
+              ]
+            },
+            "development": false,
+            "copyPolicy": {
+              "ignorePatterns": [
+                "package.json",
+                "package-lock.json",
+                "tsconfig.json"
+              ],
+              "disable": false
+            }
+          },
+          "options": {}
+        }
+      }
+    }
+  }
+}

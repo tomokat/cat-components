@@ -1,0 +1,36 @@
+{
+  "name": "stencil-compiler",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/stencil-compiler/stencil-compiler.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rm -rf dist types",
+    "test": "echo \"Test files are not defined for Stencil compiler\"",
+    "test:hero": "run-s clean build test"
+  },
+  "devDependencies": {
+    "@stencil/core": "1.14.0",
+    "@stencil/sass": "^1.3.2",
+    "@types/node": "13.9.3",
+    "@types/vinyl": "2.0.4"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@bit/bit.envs.compilers.utils": "^0.1.11",
+    "execa": "^4.0.3",
+    "vinyl": "2.2.0"
+  }
+}
