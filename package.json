@@ -22,7 +22,24 @@
     "generate": "func() { hygen component \"$1\" --domain=\"$2\" \"$3\" && stencil build; }; func"
   },
   "dependencies": {
+    "@bit/bit.envs.compilers.stencil": "file:./components/compilers/stencil",
     "@stencil/core": "^2.0.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "bit": {
+    "env": {
+      "compiler": {
+        "bit.envs/compilers/stencil@0.0.35": {
+          "options": {
+            "file": "./components/compilers/stencil"
+          }
+        }
+      }
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
+  },
+  "devDependencies": {
+    "@stencil/sass": "^1.3.2"
+  }
 }

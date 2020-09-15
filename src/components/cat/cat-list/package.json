@@ -1,0 +1,5 @@
+{
+  "module": "dist/index.mjs",
+  "collection": "dist/collection/collection-manifest.json",
+  "types": "dist/types/components.d.ts"
+}
