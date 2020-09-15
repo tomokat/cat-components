@@ -36,6 +36,7 @@ export class CatList {
     }
     return (
       <div>
+        <div>Version 0.1.3</div>
         <div>Cat of the day</div>
         {this.catListData.map((catData) =>
           <img src={catData.url} width={catData.width/2} height={catData.height/2} />

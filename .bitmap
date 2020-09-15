@@ -44,7 +44,7 @@
         "origin": "IMPORTED",
         "originallySharedDir": "packages"
     },
-    "teamcat.catcomponents/cat-list@0.1.2": {
+    "teamcat.catcomponents/cat-list@0.1.3": {
         "files": [
             {
                 "relativePath": "src/components/cat/cat-list/cat-list.tsx",
